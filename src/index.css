@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Sora:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg-dark text-text-primary font-body;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(201, 255, 59, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.01) 0%, transparent 50%);
+}
+
+#root {
+  position: relative;
+}
+
+/* Custom scrollbar - editorial style */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-lime rounded-full hover:bg-accent-purple;
+  transition: background-color 0.3s ease;
+}
+
+/* Utility classes */
+.section-spacing {
+  @apply py-20 md:py-32;
+}
+
+.section-padding {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+.container-max {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Editorial glass effect */
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-border-light transition-all duration-300;
+}
+
+.glass-hover {
+  @apply hover:border-border-accent hover:shadow-lift;
+}
+
+.glass-strong {
+  @apply bg-white/[0.08] backdrop-blur-lg border border-border-accent;
+}
+
+/* Accent highlight */
+.text-accent {
+  @apply text-accent-lime;
+}
+
+.text-accent-alt {
+  @apply text-accent-purple;
+}
+
+/* Premium button styles - editorial */
+.button-primary {
+  @apply px-7 py-3 rounded-lg font-semibold transition-all duration-300
+         bg-accent-lime text-bg-dark hover:shadow-goldGlow
+         border border-accent-lime
+         hover:scale-105 active:scale-95;
+}
+
+.button-secondary {
+  @apply px-7 py-3 rounded-lg font-semibold transition-all duration-300
+         glass glass-hover text-text-primary
+         hover:text-accent-lime hover:border-border-accent;
+}
+
+.button-disabled {
+  @apply px-7 py-3 rounded-lg font-semibold
+         glass text-text-muted cursor-not-allowed opacity-50;
+}
+
+/* Badge - editorial */
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wide
+         glass text-text-secondary uppercase;
+}
+
+/* Tech tag - editorial */
+.tech-tag {
+  @apply inline-block px-4 py-2 rounded-lg text-sm font-medium
+         bg-bg-panel border border-border-light
+         text-text-primary transition-all duration-300
+         hover:border-border-accent hover:text-accent-lime hover:bg-bg-soft;
+}
+
+/* Card styles - editorial */
+.card-glass {
+  @apply glass glass-hover rounded-xl p-7 transition-all duration-300;
+}
+
+.card-glass.group {
+  @apply glass glass-hover rounded-xl p-7 transition-all duration-300;
+}
+
+.card-dark {
+  @apply bg-bg-panel border border-border-light rounded-xl p-7 
+         transition-all duration-300 hover:border-border-accent hover:shadow-lift;
+}
+
+.card-dark.group {
+  @apply bg-bg-panel border border-border-light rounded-xl p-7 
+         transition-all duration-300 hover:border-border-accent hover:shadow-lift;
+}
+
+.card-editorial {
+  @apply bg-bg-soft border border-border-light rounded-xl overflow-hidden 
+         transition-all duration-300 hover:shadow-editorial hover:border-border-accent;
+}
+
+/* Section background */
+.section-bg {
+  @apply bg-bg-soft;
+}
+
+/* Social icon button */
+.icon-button {
+  @apply w-12 h-12 flex items-center justify-center rounded-lg glass glass-hover
+         text-text-secondary hover:text-accent-lime transition-all duration-300;
+}
+
+/* Editorial divider */
+.divider {
+  @apply border-t border-border-light;
+}
+
+/* Premium heading styling */
+.heading-editorial {
+  @apply font-heading text-text-primary leading-tight tracking-tight;
+}
+
+/* Text utilities */
+.text-subtle {
+  @apply text-text-muted font-medium;
+}
+
+.text-highlight {
+  @apply text-accent-lime font-semibold;
+}
+
+.text-secondary-highlight {
+  @apply text-accent-purple font-semibold;
+}
