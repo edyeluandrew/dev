@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaX } from 'react-icons/fa6';
+import heroImage from '../assets/hero.jpg';
 
 export default function Hero() {
   const socialLinks = [
@@ -112,7 +113,7 @@ export default function Hero() {
                 className="relative z-10 rounded-xl overflow-hidden card-editorial group"
               >
                 <img
-                  src="/src/assets/hero.jpg"
+                  src={heroImage}
                   alt="Edyelu Andrew"
                   className="w-full h-auto object-cover aspect-square md:aspect-auto"
                   onError={(e) => {
